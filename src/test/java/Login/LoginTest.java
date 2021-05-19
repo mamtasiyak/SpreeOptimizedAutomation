@@ -12,6 +12,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.Login;
+
+import java.io.IOException;
+
 public class LoginTest extends BaseTest {
     @DataProvider(name = "data")
     public Object[][] userCredentials(){
@@ -21,7 +24,7 @@ public class LoginTest extends BaseTest {
                 };
     }
     @Test(dataProvider = "data")
-    public void testValidUserCredentials(String uName, String passwd) {
+    public void testValidUserCredentials(String uName, String passwd) throws IOException {
         Login login = new Login(driver);
         login.clickLoginButton();
         login.as(uName,passwd);
