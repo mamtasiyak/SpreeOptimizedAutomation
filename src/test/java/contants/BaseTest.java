@@ -11,6 +11,7 @@ public class BaseTest {
     public void setUp(){
         String chromeDriverPath = System.getProperty("user.dir")+"/chromedriver";
         System.setProperty("webdriver.chrome.driver",chromeDriverPath);
+        System.out.println("In order to check GoCD test");
         //System.setProperty("webdriver.chrome.driver","/Users/mamta.siyak/Downloads/chromedriver");
         driver= new ChromeDriver();
         driver.get(Constants.BASE_URL);
