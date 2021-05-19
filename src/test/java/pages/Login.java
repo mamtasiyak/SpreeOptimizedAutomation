@@ -19,7 +19,7 @@ public class Login extends Header{
     private WebElement passWord;
     @FindBy(name = "commit")
     private WebElement loginButton;
-    private int i=0;
+    public static int i=0;
     public Login(WebDriver driver){
         super(driver);
         this.driver = driver;
