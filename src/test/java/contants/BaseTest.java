@@ -9,7 +9,9 @@ public class BaseTest {
     public WebDriver driver;
     @BeforeMethod
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver","/Users/mamta.siyak/Downloads/chromedriver");
+        String chromeDriverPath = System.getProperty("user.dir")+"/chromedriver";
+        System.setProperty("webdriver.chrome.driver",chromeDriverPath);
+        //System.setProperty("webdriver.chrome.driver","/Users/mamta.siyak/Downloads/chromedriver");
         driver= new ChromeDriver();
         driver.get(Constants.BASE_URL);
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

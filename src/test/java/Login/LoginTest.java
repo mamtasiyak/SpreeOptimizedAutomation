@@ -17,9 +17,8 @@ public class LoginTest extends BaseTest {
     public Object[][] userCredentials(){
         return new Object[][]{
                 new Object[]{"mamta.siyak@thoughtworks.com","mamtasiyak1@"},
-                new Object[]{"mamta.siyak@thoughtworks.com","abc"},
-                new Object[]{"","abc"},
-                new Object[]{"mamta.siyak@thoughtworks.com",""}};
+                new Object[]{"mamta.siyak@thoughtworks.com","abc"}
+                };
     }
     @Test(dataProvider = "data")
     public void testValidUserCredentials(String uName, String passwd) {
